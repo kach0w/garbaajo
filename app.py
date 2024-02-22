@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import tensorflow as tf
+import cv2 as cv
 
 from PIL import Image
 st.title("Garbage Classification App")
