@@ -13,8 +13,8 @@ def load_model():
 def preprocess_image(image):
     image = Image.open(image)
     resized_image = image.resize((100, 100))
-    normalized_image = resized_image / 255.0
-    preprocessed_image = np.expand_dims(normalized_image, axis=0)
+    # normalized_image = resized_image / 255.0
+    preprocessed_image = np.expand_dims(resized_image, axis=0)
     return preprocessed_image
 
 frame = st.camera_input("Take Your Photo");
