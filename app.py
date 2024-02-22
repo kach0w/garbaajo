@@ -26,7 +26,7 @@ if frame is not None:
     arr = ["a battery", "biological stuff", "trash", "things to be recycled"]
     c = arr[np.argmax(prediction)]
     
-    st.write("The model is " + str(prediction.max())) + "% accurate that this image has " + str(c))
+    st.write("The model is " + str(prediction.max()) + "% accurate that this image has " + str(c) + ".")
     if(c == "a battery"):
         st.write("### Do not put this in any of your trash bins. Send it to a local recycling center.")
     st.image(frame, 200)
