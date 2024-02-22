@@ -22,6 +22,7 @@ frame = st.camera_input("Take Your Photo");
 if frame is not None:
     processed_frame = preprocess_image(frame)
     prediction = model.predict(processed_frame)
+    st.write(prediction)
     # st.write("Prediction:", prediction) 
     arr = ["a battery", "biological stuff", "trash", "things to be recycled"]
     c = arr[np.argmax(prediction)]
