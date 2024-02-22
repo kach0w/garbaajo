@@ -2,4 +2,4 @@ pandas
 numpy
 tensorflow
 keras
- opencv-python
+opencv-python
