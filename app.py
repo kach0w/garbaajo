@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import tensorflow as tf
-import cv2 as cv2
+import cv2 as cv
 
 from PIL import Image
 st.title("Garbage Classification App")
@@ -13,14 +13,14 @@ def load_model():
     return model
 def preprocess_image(image):
     # Resize the image to match the input shape of your model
-    resized_image = cv2.resize(image, (100, 100))
+    resized_image = cv.resize(image, (100, 100))
     # Normalize the image pixel values
     normalized_image = resized_image / 255.0
     # Add batch dimension
     preprocessed_image = np.expand_dims(normalized_image, axis=0)
     return preprocessed_image
 
-cap = cv2.VideoCapture(0)
+cap = cv.VideoCapture(0)
 if not cap.isOpened():
     st.error("Unable to open camera.")
 
