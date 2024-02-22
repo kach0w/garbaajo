@@ -17,6 +17,7 @@ def preprocess_image(image):
     preprocessed_image = np.expand_dims(resized_image, axis=0)
     return preprocessed_image
 
+model = load_model()
 frame = st.camera_input("Take Your Photo");
 if frame is not None:
     processed_frame = preprocess_image(frame)
