@@ -22,5 +22,11 @@ frame = st.camera_input("Take Your Photo");
 if frame is not None:
     processed_frame = preprocess_image(frame)
     prediction = model.predict(processed_frame)
-    st.write("Prediction:", prediction) 
-    st.image(frame, channels="BGR")
+    # st.write("Prediction:", prediction) 
+    arr = ["Battery", "Biological", "Trash", "Recycling"]
+    c = arr[np.argmax(prediction)]
+    
+    st.write("The model is " + max(prediction) + "% accurate that this image has " + c)
+    if(c == "Battery"):
+        st.write("### Do not put this in any of your trash bins. Send it to a local recycling center.")
+    st.image(frame, 200)
