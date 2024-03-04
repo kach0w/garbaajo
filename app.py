@@ -6,16 +6,16 @@ import torch
 
 st.title("Garbage Classification App")
 @st.cache(allow_output_mutation=True)
-def load_model():
-    model = torch.load("model.pth")
-    return model
+# def load_model():
+#     model = torch.load("model.pth")
+#     return model
 def preprocess_image(image):
     image = Image.open(image)
     resized_image = image.resize((100, 100))
     preprocessed_image = np.expand_dims(resized_image, axis=0)
     return preprocessed_image
 
-model = torch.load("model.pth")
+model = torch.load(r"model.pth")
 frame = st.camera_input("Take Your Photo");
 if frame is not None:
     processed_frame = preprocess_image(frame)
