@@ -3,3 +3,4 @@ numpy
 tensorflow
 keras
 PIL
+torch
