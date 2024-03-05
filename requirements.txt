@@ -1,5 +1,4 @@
 pandas
 numpy
-tensorflow
-keras
 torch
+opencv-python
