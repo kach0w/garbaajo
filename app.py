@@ -4,7 +4,6 @@ from PIL import Image
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import matplotlib.pyplot as plt
 class Model(nn.Module):
     def __init__(self):
         super(Model, self).__init__()
