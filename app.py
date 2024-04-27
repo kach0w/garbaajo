@@ -42,8 +42,8 @@ def getPrediction(image):
     labels = ['battery', 'biological', 'brown-glass', 'cardboard', 'clothes', 'green-glass', 'metal', 'paper', 'plastic', 'shoes', 'trash', 'white-glass']
     return labels[predictions.item()]
 
-# frame = st.camera_input("Take Photo");
-frame = st.file_uploader("Upload Photo")
+frame = st.camera_input("Take Photo");
+# frame = st.file_uploader("Upload Photo")
 if frame is not None:
     pred = getPrediction(frame)
     st.write(pred)
