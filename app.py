@@ -43,7 +43,7 @@ def getPrediction(image):
     return labels[predictions.item()]
 
 # frame = st.camera_input("Take Photo");
-frame = st.file_uploader("Upload Photo")
+# frame = st.file_uploader("Upload Photo")
 if frame is not None:
     pred = getPrediction(frame)
     st.write(pred)
